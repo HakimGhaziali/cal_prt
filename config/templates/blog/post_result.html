@@ -1,0 +1,72 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+
+<table style="width:80%">
+  <tr>
+    <th>Part Number</th>
+    <th>Brand</th>
+    <th>time research</th>
+    <th>Past Dollar</th>
+    <th>Past Price</th>
+    <th>New Dollar</th>
+    <th>New Price</th>
+    <th>sellers</th>
+  </tr>
+  {% for x in x %}
+  <tr>
+    <td>{{ x.partnumber }}</td>
+    <td>{{ x.brand }}</td>
+
+    <th>{{ x.created }}</th>
+    <td>{{ x.past_dollar }}</td>
+    <td>{{ x.past_price }}</td>
+    <td>{{ x.new_dollar }}</td>
+    <td>{{ x.newprice }}</td>
+    <td>{{ x.body }}</td>
+
+  </tr>
+  {% endfor %}
+
+
+</table>
+
+<br> 
+
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+
+
+
+
+
+</body>
+</html>
+
+
+  {% endblock content %}
